@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="shortcut icon" href="../img/opa.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+</head>
+
+
+<body class="home ">
+  <!--Navbar section-->
+  <nav class="navbar navbar-default navbar-static-top ">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="../index.html">
+                  
+                    <img src="../img/opa-removebg-preview.png" alt="OpaSocial" title="" width="70" height="50"> OpaSocial
+                  </a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li  >
+          <a href="../index.html" >
+            <i class="navbar-icon fas fa-sign-in-alt"></i>                Sign in
+          </a>
+        </li>
+                    <li  >
+          <a href="../index.html" >
+            <i class="navbar-icon fas fa-address-card"></i>                Sign up
+          </a>
+        </li>
+                    <li >
+          <a href="./terms.html" >
+            <i class="navbar-icon fas fa-window-restore"></i>                Terms
+          </a>
+        </li>
+                    <li >
+          <a href="../howitwork/hwitwork.html" >
+            <i class="navbar-icon fas fa-question-circle"></i>                HOW IT WORKS
+          </a>
+        </li>
+                    <li >
+          <a href="../services/service.html" >
+            <i class="navbar-icon fas fa-server"></i>                Services
+          </a>
+        </li>
+          
+                    <li >
+          <a href="../contact/contact.html" >
+            <i class="navbar-icon fas fa-phone-square"></i>         Contact
+          </a>
+        </li>
+                  </ul>
+    </div>
+  </div>
+  </nav>
+    
+
+   <!-- Main variables *content* -->
+   <div class="apiPage">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="well">
+            <p>API Docs</p>
+                <div class="table-responsive">
+                  <table class="table service-tablwa service-tablwa-V2 service-well">
+                    <tbody>
+                      <tr class="serviceData">
+                        <td class="width-40">HTTP Method</td>
+                        <td>POST</td>
+                      </tr>
+                      <tr class="serviceData">
+                        <td>API URL</td>
+                        <td><span class="badge-tiny badge-primary">https://Opasocial.com/api/v2</span></td>
+                      </tr>
+                                          <tr class="serviceData">
+                        <td>Response format</td>
+                        <td>JSON</td>
+                      </tr>
+                      <tr class="serviceData">
+                        <td>Download Examples</td>
+                        <td><a href="#" class="btn btn-primary" target="_blank">Example of PHP code</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="well">
+             <p>User balance</p>
+  
+
+                    <div class="table-responsive">
+            <table class="table service-tablwa service-tablwa-V2 service-well">
+              <thead>
+                <tr>
+                  <th class="width-40">Parameters</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                              <tr>
+                  <td>key</td>
+                  <td>Your API key</td>
+                </tr>
+                              <tr>
+                  <td>action</td>
+                  <td>balance</td>
+                </tr>
+                            </tbody>
+            </table>
+          </div>
+                  <div class="PaddingDiv">
+            <p><strong>Example response</strong></p>
+            <div class="code-container">
+              <pre id="editor-1">{
+                "balance": "100.84292",
+                "currency": "USD"
+                 }</pre>
+            </div>
+          </div>
+                        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6"><div class="well">
+        <div class="row header-card">
+          <div class="col-sm-12">
+            <h4>Service list</h4>
+          </div>
+        </div>
+        <div class="row well-body">
+          <div class="col-sm-12">
+            <div class="center-big-content-block">
+  
+            </div>
+          </div>
+        </div>
+  
+                    
+              <div class="table-responsive">
+          <table class="table service-tablwa service-tablwa-V2 service-well">
+            <thead>
+              <tr>
+                <th class="width-40">Parameters</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                          <tr>
+                <td>key</td>
+                <td>Your API key</td>
+              </tr>
+                          <tr>
+                <td>action</td>
+                <td>services</td>
+              </tr>
+                        </tbody>
+          </table>
+        </div>
+              <div class="PaddingDiv">
+          <p><strong>Example response</strong></p>
+          <div class="code-container">
+            <pre id="editor-2">[
+      {
+          "service": 1,
+          "name": "Followers",
+          "type": "Default",
+          "category": "First Category",
+          "rate": "0.90",
+          "min": "50",
+          "max": "10000",
+          "refill": true
+      },
+      {
+          "service": 2,
+          "name": "Comments",
+          "type": "Custom Comments",
+          "category": "Second Category",
+          "rate": "8",
+          "min": "10",
+          "max": "1500",
+          "refill": false
+      }
+     ]</pre>
+          </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-6">
+      <div class="well">
+        <div class="row header-card">
+          <div class="col-sm-12">
+            <h4>Add order</h4>
+          </div>
+        </div>
+        <div class="row well-body">
+          <div class="col-sm-12">
+            <div class="center-big-content-block">
+  
+            </div>
+          </div>
+        </div>
+              
+                    <div class="PaddingDiv">
+          <p>
+            <form class="form-inline">
+              <div class="form-group">
+                <select class="form-control input-sm" id="service_type">
+                                  <option value="0">Default</option>
+                                  <option value="10">Package</option>
+                                  <option value="2">Custom Comments</option>
+                                  <option value="3">Mentions with Hashtags</option>
+                                  <option value="14">Custom Comments Package</option>
+                                  <option value="15">Comment Likes</option>
+                                  <option value="17">Poll</option>
+                                  <option value="20">Invites from Groups</option>
+                                  <option value="100">Subscriptions</option>
+                                </select>
+              </div>
+          </form>
+        </p>
+      </div>
+              <div id="type_0" style="display:none;">
+        <div class="table-responsive">
+          <table class="table service-tablwa service-tablwa-V2 service-well">
+            <thead>
+              <tr>
+                <th class="width-40">Parameters</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                          <tr>
+                <td>key</td>
+                <td>Your API key</td>
+              </tr>
+                          <tr>
+                <td>action</td>
+                <td>add</td>
+              </tr>
+                          <tr>
+                <td>service</td>
+                <td>Service ID</td>
+              </tr>
+                          <tr>
+                <td>link</td>
+                <td>Link to page</td>
+              </tr>
+                          <tr>
+                <td>quantity</td>
+                <td>Needed quantity</td>
+              </tr>
+                          <tr>
+                <td>runs (optional)</td>
+                <td>Runs to deliver</td>
+              </tr>
+                          <tr>
+                <td>interval (optional)</td>
+                <td>Interval in minutes</td>
+              </tr>
+                        </tbody>
+          </table>
+        </div>
+      </div>
+          <div id="type_10" style="display:none;">
+        <div class="table-responsive">
+          <table class="table service-tablwa service-tablwa-V2 service-well">
+            <thead>
+              <tr>
+                <th class="width-40">Parameters</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                          <tr>
+                <td>key</td>
+                <td>Your API key</td>
+              </tr>
+                          <tr>
+                <td>action</td>
+                <td>add</td>
+              </tr>
+                          <tr>
+                <td>service</td>
+                <td>Service ID</td>
+              </tr>
+                          <tr>
+                <td>link</td>
+                <td>Link to page</td>
+              </tr>
+                        </tbody>
+          </table>
+        </div>
+      </div>
+          <div id="type_2" style="display:none;">
+        <div class="table-responsive">
+          <table class="table service-tablwa service-tablwa-V2 service-well">
+            <thead>
+              <tr>
+                <th class="width-40">Parameters</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                          <tr>
+                <td>key</td>
+                <td>Your API key</td>
+              </tr>
+                          <tr>
+                <td>action</td>
+                <td>add</td>
+              </tr>
+                          <tr>
+                <td>service</td>
+                <td>Service ID</td>
+              </tr>
+                          <tr>
+                <td>link</td>
+                <td>Link to page</td>
+              </tr>
+                          <tr>
+                <td>comments</td>
+                <td>Comments list separated by \r\n or \n</td>
+              </tr>
+                        </tbody>
+          </table>
+        </div>
+      </div>
+          <div id="type_3" >
+        <div class="table-responsive">
+          <table class="table service-tablwa service-tablwa-V2 service-well">
+            <thead>
+              <tr>
+                <th class="width-40">Parameters</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                          <tr>
+                <td>key</td>
+                <td>Your API key</td>
+              </tr>
+                          <tr>
+                <td>action</td>
+                <td>add</td>
+              </tr>
+                          <tr>
+                <td>service</td>
+                <td>Service ID</td>
+              </tr>
+                          <tr>
+                <td>link</td>
+                <td>Link to page</td>
+              </tr>
+                          <tr>
+                <td>quantity</td>
+                <td>Needed quantity</td>
+              </tr>
+                          <tr>
+                <td>usernames</td>
+                <td>Usernames list separated by \r\n or \n</td>
+              </tr>
+                          <tr>
+                <td>hashtags</td>
+                <td>Hashtags list separated by \r\n or \n</td>
+              </tr>
+                        </tbody>
+          </table>
+        </div>
+      </div>
+      
+              <div class="PaddingDiv">
+        <p><strong>Example response</strong></p>
+        <div class="code-container">
+          <pre id="editor-2">{
+      "order": 23501
+  }</pre>
+        </div>
+      </div>
+</div>
+  </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-sm-6"><div class="well">
+      <div class="row header-card">
+        <div class="col-sm-12">
+          <h4>Order status</h4>
+        </div>
+      </div>
+      <div class="row well-body">
+        <div class="col-sm-12">
+          <div class="center-big-content-block">
+  
+          </div>
+        </div>
+      </div>
+  
+                              
+          <div class="table-responsive">
+        <table class="table service-tablwa service-tablwa-V2 service-well">
+          <thead>
+            <tr>
+              <th class="width-40">Parameters</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+                      <tr>
+              <td>key</td>
+              <td>Your API key</td>
+            </tr>
+                      <tr>
+              <td>action</td>
+              <td>status</td>
+            </tr>
+                      <tr>
+              <td>order</td>
+              <td>Order ID</td>
+            </tr>
+                    </tbody>
+        </table>
+      </div>
+          <div class="PaddingDiv">
+        <p><strong>Example response</strong></p>
+        <div class="code-container">
+          <pre id="editor-3">{
+      "charge": "0.27819",
+      "start_count": "3572",
+      "status": "Partial",
+      "remains": "157",
+      "currency": "USD"
+  }</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="well">
+      <div class="row header-card">
+        <div class="col-sm-12">
+          <h4>Multiple orders status</h4>
+        </div>
+      </div>
+      <div class="row well-body">
+        <div class="col-sm-12">
+          <div class="center-big-content-block">
+  
+          </div>
+        </div>
+      </div>
+  
+        <div class="table-responsive">
+      <table class="table service-tablwa service-tablwa-V2 service-well">
+        <thead>
+          <tr>
+            <th class="width-40">Parameters</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+                  <tr>
+            <td>key</td>
+            <td>Your API key</td>
+          </tr>
+                  <tr>
+            <td>action</td>
+            <td>status</td>
+          </tr>
+                  <tr>
+            <td>orders</td>
+            <td>Order IDs separated by comma</td>
+          </tr>
+                </tbody>
+      </table>
+    </div>
+      <div class="PaddingDiv">
+      <p><strong>Example response</strong></p>
+      <div class="code-container">
+        <pre id="editor-4">{
+      "1": {
+          "charge": "0.27819",
+          "start_count": "3572",
+          "status": "Partial",
+          "remains": "157",
+          "currency": "USD"
+      },
+      "10": {
+          "error": "Incorrect order ID"
+      },
+      "100": {
+          "charge": "1.44219",
+          "start_count": "234",
+          "status": "In progress",
+          "remains": "10",
+          "currency": "USD"
+      }
+  }</pre>
+      </div>
+    </div>
+                        </div>
+  </div>
+  </div>
+  </div>
+  </div>  
+
+
+  <!--Footer Section-->
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="social-footer">
+              <li><a href="#"><span class="social-icon"><i class="fas fa-phone-alt"></i></span> support@OpaSocial.com</a></li>
+              <li><a href="#"><span class="social-icon"><i class="fab fa-facebook"></i></span> socialfollowerz </a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="footer-nav">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../index.html">Sign in</a></li>
+              <li><a href="../signup/signup.html">Sign up</a></li>
+              <li><a href="../faq/faq.html">FAQ</a></li>
+              <li><a href="./api.html">Api</a></li>
+              
+              <li><a href="../about/about-us.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>© Copyright 2021. All Rights Reserved by OpaSocial ( Digital Web Solutions FZ LLC ) </p>
+          </div>
+          <div class="col-sm-6">
+            <ul class="footer-nav">
+              <li><a href="../terms/terms.html">Terms & Conditions</a></li>
+              <li><a href="/api/api.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/bootstrap.bundle.min.js.js"></script>
+</body>
+</html>
